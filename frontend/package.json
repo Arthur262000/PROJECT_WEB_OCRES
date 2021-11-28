@@ -3,9 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "axios": "^0.24.0",
+    "babel-loader": "8.1.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "^3.4.4",
+    "webpack": "^4.42.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -31,9 +36,9 @@
     ]
   },
   "devDependencies": {
-    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-actions": "^6.4.0",
     "@storybook/addon-links": "^5.2.6",
     "@storybook/addons": "^5.2.6",
-    "@storybook/react": "^5.2.6"
+    "@storybook/react": "^3.4.12"
   }
 }
