@@ -47,7 +47,7 @@ const Search = () => {
           <TextField
             style={{ flex: 1 }}
             className="searchBox"
-            label="Search"
+            label="Recherchez"
             variant="filled"
             onChange={(e) => setSearchText(e.target.value)}
           />
@@ -70,8 +70,8 @@ const Search = () => {
           style={{ paddingBottom: 5 }}
           aria-label="disabled tabs example"
         >
-          <Tab style={{ width: "50%" }} label="Search Movies" />
-          <Tab style={{ width: "50%" }} label="Search TV Series" />
+          <Tab style={{ width: "50%" }} label="Films" />
+          <Tab style={{ width: "50%" }} label="Series" />
         </Tabs>
       </ThemeProvider>
       <div className="trending">
@@ -89,7 +89,7 @@ const Search = () => {
           ))}
         {searchText &&
           !content &&
-          (type ? <h2>No Series Found</h2> : <h2>No Movies Found</h2>)}
+          (type ? <h2>Pas de série trouvée</h2> : <h2>Pas de film trouvé</h2>)}
       </div>
       {numOfPages > 1 && (
         <CustomPagination setPage={setPage} numOfPages={numOfPages} />

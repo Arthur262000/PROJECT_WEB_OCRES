@@ -45,23 +45,23 @@ export default function SimpleBottomNavigation() {
       className={classes.root}
     >
       <BottomNavigationAction
-        style={{ color: "white" }}
-        label="Trending"
+        style={{ color: "black" }}
+        label="Tendances"
         icon={<WhatshotIcon />}
       />
       <BottomNavigationAction
-        style={{ color: "white" }}
-        label="Movies"
+        style={{ color: "black" }}
+        label="Films"
         icon={<MovieIcon />}
       />
       <BottomNavigationAction
-        style={{ color: "white" }}
-        label="TV Series"
+        style={{ color: "black" }}
+        label="Series TV"
         icon={<TvIcon />}
       />
       <BottomNavigationAction
-        style={{ color: "white" }}
-        label="Search"
+        style={{ color: "black" }}
+        label="Recherche"
         icon={<SearchIcon />}
       />
     </BottomNavigation>
