@@ -1,6 +1,5 @@
 import {
   Button,
-  createMuiTheme,
   Tab,
   Tabs,
   TextField,
@@ -19,15 +18,6 @@ const Search = () => {
   const [page, setPage] = useState(1);
   const [content, setContent] = useState([]);
   const [numOfPages, setNumOfPages] = useState();
-
-  const darkTheme = createMuiTheme({
-    palette: {
-      type: "dark",
-      primary: {
-        main: "#fff",
-      },
-    },
-  });
 
   const fetchSearch = async () => {
     try {
@@ -52,7 +42,7 @@ const Search = () => {
 
   return (
     <div>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider >
         <div className="search">
           <TextField
             style={{ flex: 1 }}
