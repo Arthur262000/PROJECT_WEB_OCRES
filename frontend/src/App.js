@@ -6,6 +6,7 @@ import Movies from "./Pages/Movies/Movies";
 import Series from "./Pages/Series/Series";
 import Trending from "./Pages/Trending/Trending";
 import Search from "./Pages/Search/Search";
+import Stats from "./Pages/Stats/Stats";
 import { Container } from "@material-ui/core";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
             <Route path="/movies" component={Movies} />
             <Route path="/series" component={Series} />
             <Route path="/search" component={Search} />
+            <Route path="/stats" component={Stats} />
           </Switch>
         </Container>
       </div>

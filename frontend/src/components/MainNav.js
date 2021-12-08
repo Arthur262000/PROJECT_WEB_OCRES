@@ -6,6 +6,7 @@ import TvIcon from "@material-ui/icons/Tv";
 import MovieIcon from "@material-ui/icons/Movie";
 import SearchIcon from "@material-ui/icons/Search";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
+//import QueryStatsIcon from "@material-ui/icons/QueryStats";
 import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
@@ -32,6 +33,8 @@ export default function SimpleBottomNavigation() {
       history.push("/series");
     } else if (value === 3) {
       history.push("/search");
+    } else if (value === 4) {
+      history.push("/stats");
     }
   }, [value, history]);
 
@@ -62,6 +65,11 @@ export default function SimpleBottomNavigation() {
       <BottomNavigationAction
         style={{ color: "black" }}
         label="Recherche"
+        icon={<SearchIcon />}
+      />
+      <BottomNavigationAction
+        style={{ color: "black" }}
+        label="Stats"
         icon={<SearchIcon />}
       />
     </BottomNavigation>
