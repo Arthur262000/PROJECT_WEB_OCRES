@@ -19,7 +19,6 @@ const Stats = () => {
   useEffect(() => {
     window.scroll(0, 0);
     fetchStats();
-    // eslint-disable-next-line
   }, [page]);
 
   return (
