@@ -7,6 +7,7 @@ const port=3001;
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+var filmsRouter = require("./routes/films");
 
 const mongoose = require('mongoose')
 
@@ -49,6 +50,7 @@ app.use(cookieParser());
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use("/films", filmsRouter);
 
 
 

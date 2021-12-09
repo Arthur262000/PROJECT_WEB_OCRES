@@ -32,8 +32,6 @@ export default function SimpleBottomNavigation() {
     } else if (value === 2) {
       history.push("/series");
     } else if (value === 3) {
-      history.push("/search");
-    } else if (value === 4) {
       history.push("/stats");
     }
   }, [value, history]);
@@ -61,11 +59,6 @@ export default function SimpleBottomNavigation() {
         style={{ color: "black" }}
         label="Series TV"
         icon={<TvIcon />}
-      />
-      <BottomNavigationAction
-        style={{ color: "black" }}
-        label="Recherche"
-        icon={<SearchIcon />}
       />
       <BottomNavigationAction
         style={{ color: "black" }}
