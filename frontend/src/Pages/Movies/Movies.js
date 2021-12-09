@@ -25,7 +25,6 @@ const Movies = () => {
   useEffect(() => {
     window.scroll(0, 0);
     fetchMovies();
-    // eslint-disable-next-line
   }, [genreforURL, page]);
 
   return (
