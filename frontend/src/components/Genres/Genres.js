@@ -26,7 +26,7 @@ const Genres = ({
 
   const fetchGenres = async () => {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/genre/${type}/list?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
+      `https://api.themoviedb.org/3/genre/${type}/list?api_key=DB_CONNECTION=mongodb+srv://Arthur:Mongo2021@movies.6ifvm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority&language=fr-FR`
     );
     setGenres(data.genres);
   };
@@ -35,7 +35,7 @@ const Genres = ({
     fetchGenres();
 
     return () => {
-      setGenres({}); // unmounting
+      setGenres({}); 
     };
     // eslint-disable-next-line
   }, []);
