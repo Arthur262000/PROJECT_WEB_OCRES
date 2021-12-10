@@ -5,8 +5,6 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import { img_300, noPicture } from "../../config/config";
 import "./Carousel.css";
 
-const handleDragStart = (e) => e.preventDefault();
-
 const Gallery = ({ id, media_type }) => {
   const [credits, setCredits] = useState([]);
 
@@ -15,7 +13,6 @@ const Gallery = ({ id, media_type }) => {
       <img
         src={c.profile_path ? `${img_300}/${c.profile_path}` : noPicture}
         alt={c?.name}
-        onDragStart={handleDragStart}
         className="carouselItem__img"
       />
       <b className="carouselItem__txt">{c?.name}</b>
