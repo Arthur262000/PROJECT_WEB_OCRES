@@ -1,8 +1,12 @@
 import "./Stats.css";
+import {Chart} from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { useEffect, useState } from "react";
 import { Pie } from 'react-chartjs-2';
-import {Chart, ArcElement} from 'chart.js'
+import {ArcElement} from 'chart.js'
 Chart.register(ArcElement);
+Chart.register(ChartDataLabels);
+
 
 const Stats = () => {
   // eslint-disable-next-line
@@ -28,7 +32,8 @@ const Stats = () => {
         < Pie
           data={{
             labels: ['red','Blue'],
-            datasets: [{
+            datasets: [
+              {
               label: 'Movie Types',
               data : [30,70],
               backgroundColor: [
@@ -38,10 +43,32 @@ const Stats = () => {
               ],
               hoverOffset:4
             }]
-
           }}
+        height={300}
+        width={300}
+        options={{
+          plugins: {
+            datalabels: {
+                formatter: function (value, context) {
+                    return context.chart.data.labels[
+                        context.dataIndex
+                    ];
+                },
+            },
+        },
+          layout: {
+            padding: {                
+              top: 20                
+            }
+          },
+          legend: {
+            display: true,
+          },
+          maintainAspectRatio: false
+        }}
           />
       </div>
+      <span className="legend">Votre Film Préféré</span>
     </div>
   );
 }
