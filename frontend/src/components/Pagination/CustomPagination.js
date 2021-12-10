@@ -18,14 +18,14 @@ export default function CustomPagination({ setPage, numOfPages = 10 }) {
         marginTop: 10,
       }}
     >
-      <ThemeProvider >
+    
         <Pagination
           onChange={(e) => handlePageChange(e.target.textContent)}
           count={numOfPages}
           hideNextButton
           hidePrevButton
         />
-      </ThemeProvider>
+      
     </div>
   );
 }

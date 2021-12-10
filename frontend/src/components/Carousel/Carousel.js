@@ -36,7 +36,7 @@ const Gallery = ({ id, media_type }) => {
 
   const fetchCredits = async () => {
     const { data } = await axios.get(
-      `https://api.themoviedb.org/3/${media_type}/${id}/REACT_APP_API_KEY&language=fr-FR`
+      `https://api.themoviedb.org/3/${media_type}/${id}/credits?api_key=${process.env.REACT_APP_API_KEY}&language=fr-FR`
     );
     setCredits(data.cast);
   };
@@ -48,13 +48,10 @@ const Gallery = ({ id, media_type }) => {
 
   return (
     <AliceCarousel
-      mouseTracking
-      infinite
       disableDotsControls
       disableButtonsControls
       responsive={responsive}
       items={items}
-      autoPlay
     />
   );
 };
