@@ -1,6 +1,5 @@
 import React from "react";
 import Pagination from "@material-ui/lab/Pagination";
-import { ThemeProvider } from "@material-ui/core";
 
 export default function CustomPagination({ setPage, numOfPages = 10 }) {
   // Scroll to top when page changes
